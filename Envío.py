@@ -1,7 +1,7 @@
 import pika
 
 def send_message(queue_name, message):
-    credentials = pika.PlainCredentials('juan', 'juan')  # Usa tus credenciales
+    credentials = pika.PlainCredentials('juan', 'juan')
     connection = pika.BlockingConnection(pika.ConnectionParameters('localhost', 5672, '/', credentials))
     channel = connection.channel()
     
